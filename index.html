@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation Dinner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            align-items: center;
+            background-color: #272727;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        div#circle {
+            height: 200px;
+            width: 200px;
+            line-height: 200px;
+            text-align: center;
+            color: white;
+            background-color: #477CFF;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+            border-radius: 50%;
+            font-family: "Arial";
+        }
+
+        div#circle:hover {
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="circle" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        <strong>Você ganhou um jantar!</strong>
+    </div>
+
+    <script>
+        let variavelArea = document.getElementById('circle')
+
+        function entrar() {
+            variavelArea.innerHTML = '<strong>CLICA AQUI &#128523</strong>'
+            variavelArea.style.backgroundColor = 'rgb(204, 33, 33)'
+        }
+
+        function sair() {
+            variavelArea.innerHTML = '<strong>Você ganhou um jantar!</strong>'
+            variavelArea.style.backgroundColor = 'rgb(71, 124, 255)'
+        }
+        
+
+        function clicar() {
+
+            let resposta = window.confirm('Não posso contar onde é... Você aceita?')
+            if (resposta) {
+                alert('YEEEAS! Marcado amanhã 18h \u{2764} \u{23F0}')
+            }
+
+            else {
+                alert ('Tudo bem, então... \u{1F494} \u{1F614}')
+            }
+        }
+
+    </script>
+
+
+</body>
+</html>
